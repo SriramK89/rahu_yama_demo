@@ -1,0 +1,12 @@
+<% timetable = RahuYamaTime::TimeTableCalculator.new %>
+<%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable("12-12-2012"), "day") %> <hr>
+<%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable(DateTime.parse("12-Dec-2012")), "day") %> <hr>
+<%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable("Wednesday"), "day") %> <hr>
+<%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable(3), "day") %> <hr>
+Rahukalam: <%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable(3, "rahukalam"), "day-option") %> <hr>
+Yamagandam: <%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable(3, "yamagandam"), "day-option") %> <hr>
+Gulikai: <%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable(3, "gulikai"), "day-option") %> <hr>
+Rahukalam: <%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable("week", "rahukalam"), "week-option") %> <hr>
+Yamagandam: <%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable("week", "yamagandam"), "week-option") %> <hr>
+Gulikai: <%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable("week", "gulikai"), "week-option") %> <hr>
+<%= list(timetable.get_rahukalam_yamagandam_gulikai_timetable("week"), "day-week") %>
